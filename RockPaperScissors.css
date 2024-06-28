@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    overflow-y: hidden;
+}
+
+.leftSide{
+    background-color: aqua;
+    width: 50vw;
+    height: 100vh;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.rightSide{
+    background-color: black;
+    width: 50vw;
+    height: 100vh;
+    padding: 30px;
+}
+
+.leftSide h1{
+    text-align: center;
+    margin-right: 50px;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.rightSide h1{
+    text-align: center;
+    margin-right: 50px;
+    color: white;
+    font-size: 35px;
+    margin-bottom: -30px;
+}
+
+.image-display-player{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.image-display-computer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 275px;
+    margin-top: 13px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+button{
+    background: white;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: red;
+    padding: 10px;
+}
+
+#round{
+    margin-bottom: -115px;
+}
+
+#quit-btn{
+    background-color: white;
+    color: red;
+    /* -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: red; */
+    font-size: 25px;
+    position: absolute;
+    top: 650px;
+    left: 725px;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+}
+
+#quit-btn:hover{
+    background-color: red;
+    color: white;
+    -webkit-text-fill-color: white;
+}
+
+#tryAgain-btn{
+    background-color: white;
+    color: red;
+    font-size: 25px;
+    position: absolute;
+    top: 580px;
+    left: 690px;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+}
+
+#tryAgain-btn:hover{
+    background-color: red;
+    color: white;
+}
