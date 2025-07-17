@@ -7,7 +7,7 @@ let paperBtn = document.getElementById("paper-btn")
 let scissorsBtn = document.getElementById("scissors-btn")
 let roundDisplay =document.getElementById("round")
 let quitBtn = document.getElementById("quit-btn")
-let playAgainBtn = document.getElementById("tryAgain-btn")
+let playAgainBtn = document.getElementById("playAgain-btn")
 
 let storePlayerScore = 0
 let storeComputerScore = 0

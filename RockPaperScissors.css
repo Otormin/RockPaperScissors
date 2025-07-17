@@ -1,116 +1,158 @@
 @import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-.container{
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.leftSide,
+.rightSide {
+  flex: 1 1 50%;
+  min-height: 100vh;
+  padding: 30px 50px;
+}
+
+.leftSide {
+  background-color: aqua;
+}
+
+.rightSide {
+  background-color: black;
+  color: white;
+}
+
+.leftSide h1,
+.rightSide h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.image-display-player,
+.image-display-computer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.display-player-images{
     display: flex;
-    overflow-y: hidden;
 }
 
-.leftSide{
-    background-color: aqua;
-    width: 50vw;
-    height: 100vh;
-    padding-left: 50px;
-    padding-top: 30px;
+.image-display-computer {
+  margin: 0;
 }
 
-.rightSide{
-    background-color: black;
-    width: 50vw;
-    height: 100vh;
-    padding: 30px;
+img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
 }
 
-.leftSide h1{
-    text-align: center;
-    margin-right: 50px;
-    font-size: 35px;
-    margin-bottom: 40px;
+button {
+  background: white;
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.rightSide h1{
-    text-align: center;
-    margin-right: 50px;
-    color: white;
-    font-size: 35px;
-    margin-bottom: -30px;
+button:hover {
+  background: red;
+  color: white;
 }
 
-.image-display-player{
-    height: 100%;
-    display: flex;
-    align-items: center;
+#round {
+  margin-bottom: 20px;
 }
 
-.image-display-computer{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 275px;
-    margin-top: 13px;
+/* Quit & Play Again buttons */
+#quit-btn,
+#playAgain-btn {
+  background-color: white;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: none;
+  position: relative;
 }
 
-img{
-    width: 200px;
-    height: 200px;
+#quit-btn:hover,
+#playAgain-btn:hover {
+  background-color: red;
+  color: white;
 }
 
-button{
-    background: white;
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 10px;
-    cursor: pointer;
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftSide,
+  .rightSide {
+    flex: 1 1 100%;
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .leftSide h1,
+  .rightSide h1 {
+    font-size: 28px;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #quit-btn,
+  #playAgain-btn {
+    font-size: 18px;
+    padding: 8px 16px;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 20px auto 0;
+    display: block;
+  }
 }
 
-button:hover{
-    background: red;
-    padding: 10px;
-}
+@media (max-width: 480px) {
+  .leftSide h1,
+  .rightSide h1 {
+    font-size: 22px;
+  }
 
-#round{
-    margin-bottom: -115px;
-}
+  img {
+    width: 120px;
+    height: 120px;
+  }
 
-#quit-btn{
-    background-color: white;
-    color: red;
-    /* -webkit-text-stroke: 2px black;
-    -webkit-text-fill-color: red; */
-    font-size: 25px;
-    position: absolute;
-    top: 650px;
-    left: 725px;
-    cursor: pointer;
-    padding: 10px;
+  button {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  #quit-btn,
+  #playAgain-btn {
+    font-size: 16px;
     display: none;
-}
-
-#quit-btn:hover{
-    background-color: red;
-    color: white;
-    -webkit-text-fill-color: white;
-}
-
-#tryAgain-btn{
-    background-color: white;
-    color: red;
-    font-size: 25px;
-    position: absolute;
-    top: 580px;
-    left: 690px;
-    cursor: pointer;
-    padding: 10px;
-    display: none;
-}
-
-#tryAgain-btn:hover{
-    background-color: red;
-    color: white;
+  }
 }
